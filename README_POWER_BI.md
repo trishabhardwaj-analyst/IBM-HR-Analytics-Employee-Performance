@@ -1,0 +1,1 @@
+Open Power BI Desktop. Get Data > Text/CSV > data/ibm_hr_date_enabled.csv. Rename table EmployeeData. Load data/date_dimension.csv as DateDimension. Paste DAX measures from DAX_Measures.txt. Apply IBM_HR_Theme.json via View > Themes > Browse for themes. Build the four pages exactly from Dashboard_Specification.md.

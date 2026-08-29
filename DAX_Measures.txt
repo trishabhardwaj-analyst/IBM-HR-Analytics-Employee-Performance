@@ -1,0 +1,11 @@
+Total Employees = COUNTROWS(EmployeeData)
+Leavers = CALCULATE([Total Employees], EmployeeData[Attrition] = "Yes")
+Attrition Rate = DIVIDE([Leavers], [Total Employees])
+Average Monthly Income = AVERAGE(EmployeeData[MonthlyIncome])
+Average Performance Rating = AVERAGE(EmployeeData[PerformanceRating])
+Average Job Satisfaction = AVERAGE(EmployeeData[JobSatisfaction])
+Overtime Attrition Rate = CALCULATE([Attrition Rate], EmployeeData[OverTime] = "Yes")
+Non-Overtime Attrition Rate = CALCULATE([Attrition Rate], EmployeeData[OverTime] = "No")
+Leaver Income = CALCULATE([Average Monthly Income], EmployeeData[Attrition] = "Yes")
+Retained Income = CALCULATE([Average Monthly Income], EmployeeData[Attrition] = "No")
+Income Gap = [Retained Income] - [Leaver Income]
